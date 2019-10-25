@@ -1,2 +1,3 @@
 rootProject.name = 'todo_web'
+include 'model', 'repository', 'web'
 

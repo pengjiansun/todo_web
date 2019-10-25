@@ -1,0 +1,15 @@
+//apply from: "$rootDir/gradle/integrationTest.gradle"
+apply plugin: 'application'
+dependencies {
+    compile project(':model')
+    testCompile 'junit:junit:4.12'
+}
+//tasks.withType(Test) {
+//    testLogging {
+//        showStandardStreams = true
+//        exceptionFormat 'full'
+//    }
+//}
+application {
+    mainClassName = 'com.sunpj.todo.repository.toDoRepositoryMain'
+}

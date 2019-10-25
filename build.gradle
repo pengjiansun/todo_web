@@ -1,17 +1,37 @@
-plugins {
-    id 'java'
-    id 'war'
+//
+//apply from: "$rootDir/gradle/integrationTest.gradle"
+
+apply plugin: 'distribution'
+allprojects{
+
+    group 'com.sunpj'
+    version '1.0-SNAPSHOT'
+    repositories {
+        mavenCentral()
+    }
 }
 
-group 'com.sunpj'
-version '1.0-SNAPSHOT'
+subprojects{
+    apply plugin: 'java'
+    ext.compatibilityVersion = 1.8
+    sourceCompatibility = compatibilityVersion
+    targetCompatibility = compatibilityVersion
 
-sourceCompatibility = 1.8
-
-repositories {
-    mavenCentral()
 }
 
-dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
